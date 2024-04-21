@@ -1,0 +1,516 @@
+:root {
+    --titulo: black;
+    --texto: black;
+    --contraste: #a4f479;
+    --fondo: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    font-weight: 400;
+    color: var(--texto);  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+header {
+    /*height: 20vh;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-image: url(../img/background_5.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center/top;
+}
+
+main {
+    flex: 1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+h2 {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--titulo);
+}
+
+a {
+    color: cadetblue;
+}
+
+p {
+    padding-bottom: 0.5rem;
+}
+
+blockquote {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.author {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+img {
+    width:  60%;
+    /*padding-top: 10px;*/
+}
+
+iframe {
+    width: fit-content;
+}
+
+/*****************************************
+************** header.html ***************
+******************************************/
+
+nav {
+    margin-top: 1rem;
+    color: var(--texto);;
+}
+
+nav ul {
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-left: 0;
+}
+
+nav ul li::before {
+    content: " · ";
+    width: 10px;
+}
+
+nav ul li:first-child::before {
+    content: "";
+}
+
+nav ul li a {
+    color: inherit;
+    border: none;
+}
+
+nav ul li a:hover {
+    border: none;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.logo {
+    width: auto;
+    height: 100px;
+    display: block;
+}
+
+.logo-white {
+    transform: scaleX(-1);
+    display: none;
+}
+
+/*****************************************
+************** footer.html ***************
+******************************************/
+
+footer {    
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+footer ul li {
+    padding-left: 1rem;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: white;
+}
+
+footer p {
+    padding-bottom: 0px;
+}
+
+/*****************************************
+************** index.html ****************
+******************************************/
+
+.home {
+    background-image: url(../img/background_5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.home main {
+    padding-top: 10vh;
+    height: 65vh;
+}
+
+.home header {
+    background-image: none;
+}
+
+.home .logo{
+    display: inline;
+}
+
+.home .logo-white {
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.home footer {
+    color: var(--texto);
+    padding-bottom: 20px;
+    background-color: transparent;
+    background: linear-gradient(to bottom, transparent, gray);
+}
+
+.home a {
+    color: inherit;
+    border: none;
+}
+
+.home a:hover {
+    border: none;
+    text-decoration: underline;
+}
+
+/* Presentación */
+
+.presentation {
+    background-image: url(../img/background.jpg); /* Cambiar 'ruta/de/tu/imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.presentation p, .detalle p, .singles li {
+    opacity: .8;
+}
+
+figure {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.logo-super {
+    width: fit-content;
+}
+
+.presentation figure img {
+    width: 80%;
+}
+
+.members, .member {
+    margin-top: 2rem;
+}
+
+.member h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+#members a {
+    display: contents;
+}
+
+#members img {
+    max-width: calc(25% - 5px); 
+    height: auto;
+    object-fit: cover; 
+}
+
+#members figcaption {
+    font-weight: 600;
+}
+
+#members:hover img {
+    opacity: 0.2;
+}
+  
+#members img:hover {
+    opacity: 1;
+}  
+
+/*****************************************
+************* musica.html ****************
+******************************************/
+
+.music {
+    background: url(../img/background_music.jpeg) no-repeat center/cover;
+}
+
+.music .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+}
+
+.img-inline {
+    text-align: center;
+}
+
+.img-inline li {
+    list-style-type: none;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    max-width: fit-content;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--texto);
+    font-size: 1.5em;/*24px;*/
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Ocultar el texto inicialmente */
+    transition: opacity 0.3s ease; /* Agregar transición suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container:hover img {
+    opacity: .1; /* Mostrar overlay al pasar el ratón por encima */
+}
+
+.img-container:hover .overlay {
+    opacity: 1; /* Mostrar texto al pasar el ratón por encima */
+}
+
+/*****************************************
+***************** Detalle ****************
+******************************************/
+
+.night-visions {
+    background: url(../img/background_night_visions.jpg) no-repeat center/cover;
+}
+
+.smoke-mirrors {
+    background: url(../img/background_smoke_mirrors.jpg) no-repeat center/cover;
+}
+
+.origins {
+    background: url(../img/background_origins.png) no-repeat center/cover;
+}
+
+.evolve {
+    background: url(../img/background_evolve.jpg) no-repeat center/cover;
+}
+
+.mercury-act-1 {
+    background: url(../img/background_mercury_act_1.jpg) no-repeat center/cover;
+}
+
+.mercury-act-2 {
+    background: url(../img/background_mercury_act_2.webp) no-repeat center/cover;
+}
+
+.detalle #albums {
+    text-align: center;
+}
+
+.detalle .overlay {
+    color: white;
+}
+
+.detalle img {
+    width: 100%;
+}
+
+.detalle ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.singles {
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+}
+
+.singles li {
+    margin-bottom: 0.5rem;;
+}
+
+.left-block {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.right-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+}
+
+/*****************************************
+************ enlaces.html ****************
+******************************************/
+
+.enlaces {
+    background: url(../img/portrait.jpeg) no-repeat center/cover;
+}
+
+.enlaces .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+}
+
+.enlaces li ul {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*****************************************
+**************** Tablet ******************
+******************************************/
+
+@media screen and (min-width: 768px) {    
+    .container {
+        max-width: 95%;
+    }
+    
+    .home .logo {
+        height: auto;
+    }
+    
+    iframe {
+        height: 270px;
+    }
+
+    figcaption{
+        font-size: 0.8rem;
+    }
+
+    .presentation .img-inline {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .img-inline {
+        text-align: center;
+        padding-bottom: 20px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        display: grid;
+    }
+
+    .detalle .container, .presentation .container {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .left-block {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .right-block {
+        flex: 2;
+        margin-left: 20px;
+    }
+
+    .detalle h2 {
+        text-align: left;
+    }
+
+    .detalle #albums {
+        display: none;
+    }
+
+    .detalle iframe, .presentation iframe {
+        width: 100%;
+    }    
+}
+
+/*****************************************
+************** Escritorio ****************
+******************************************/
+
+@media screen and (min-width: 1200px) {    
+    .container {
+        max-width: 80%;
+    }
+
+    .home .logo-white {
+        transform: scaleX(-1);
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    iframe {
+        width: 60%;
+        height: 400px;
+    }
+
+    figcaption{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .img-inline { 
+        grid-template-columns: repeat(3,1fr);
+    }
+}
