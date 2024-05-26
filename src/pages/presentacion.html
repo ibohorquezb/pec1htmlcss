@@ -8,7 +8,10 @@
     <meta name="description" content="Presentación - Imagine Dragons" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png"/>
+    <!-- Incluimos el favicon para el modo claro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <!-- Incluimos el favicon para el modo oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css"/>
@@ -27,9 +30,10 @@
           
           <div class="left-block">
             <figure>
-              <img src="../img/logo_super_2.png" alt="Logo superpuesto de Imagine Dragons">
+              <img class="disc" src="../img/40.svg" alt="Logo animado disco de más de 40 millones de copias vendidas">
+              <figcaption><strong>+ 40 millones de copias vendidas</strong></figcaption>
             </figure>     
-          
+
             <br/><hr/><br/>
 
             <figure id="members">
@@ -54,7 +58,11 @@
             <h2>Explorando Orígenes: La Evolución de <em>Imagine Dragons</em></h2>
             
             <figure>
-              <img src="../img/background_2.jpg" alt="Retrato de Imagine Dragons">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="../img/background_2_portrait.jpg" />
+                  <source media="(min-width: 769px)" srcset="../img/background_2.jpg" />
+                  <img src="../img/background_2.jpg" alt="Retrato de Imagine Dragons">
+                </picture>
                 <figcaption>Foto de Imagine Dragons</figcaption>
             </figure>
 
@@ -84,7 +92,11 @@
                 <h3>Dan Reynolds</h3>
     
                 <figure>
-                  <img src="../img/dan_reynolds.jpg" alt="Foto de Dan Reynolds">
+                  <picture>
+                      <source media="(max-width: 768px)" srcset="../img/dan_reynolds_725w.jpg" />
+                      <source media="(min-width: 769px)" srcset="../img/dan_reynolds.jpg" />
+                      <img src="../img/dan_reynolds.jpg" alt="Foto de Dan Reynolds">
+                    </picture>
                     <figcaption>Dan Reynolds (Vocalista)</figcaption>
                 </figure>
     
@@ -95,9 +107,13 @@
                 <h3>Wayne Sermon</h3>
     
                 <figure>
-                  <img src="../img/wayne_sermon.webp" alt="Foto de Wayne Sermon">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../img/wayne_sermon_742w.webp" />
+                      <source media="(min-width: 769px)" srcset="../img/wayne_sermon.webp" />
+                      <img src="../img/wayne_sermon.webp" alt="Foto de Wayne Sermon" />
+                    </picture>
                     <figcaption>Wayne Sermon (Guitarrista)</figcaption>
-                </figure>  
+                </figure>
     
                 <p>Sermon nació el 15 de junio de 1984 en American Fork, Utah. Fue bautizado como miembro de La Iglesia de Jesucristo de los Santos de los Últimos Días.</p>
                 <p>Wayne comenzó desde temprana edad a tocar el chelo y la guitarra. Desde que era niño estaba decidido a ser guitarrista. Su padre tenía un amplificador de audio, un tocadiscos y todos los álbumes de los <em>Beatles</em> en vinilo, a los que Sermon tanto le gustaba escuchar. También le gustaba el sonido de <em>Tom Scholz</em>(de Boston) y su acercamiento a los solos. Asistió a la Escuela de Música de Berklee, donde se especializó en doble interpretación de guitarra y composición; y finalmente se graduó en el 2008. Mientras estuvo en Berklee formó parte de un grupo de cinco guitarristas de jazz llamado <em>The Eclectic Electrics</em>.</p>
@@ -107,7 +123,11 @@
                 <h3>Ben McKee</h3>
     
                 <figure>
-                  <img src="../img/ben_mckee.jpg" alt="Foto de Ben McKee">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../img/ben_mckee_756w.webp" />
+                      <source media="(min-width: 769px)" srcset="../img/ben_mckee.webp" />
+                      <img src="../img/ben_mckee.webp" alt="Foto de Ben McKee">
+                    </picture>
                     <figcaption>Ben Mackee (Bajista)</figcaption>
                 </figure>  
     
@@ -118,7 +138,11 @@
                 <h3>Daniel Platzman</h3>
     
                 <figure>
-                  <img src="../img/daniel_platzman.jpg" alt="Foto de Wayne Sermon">
+                    <picture>
+                      <source media="(max-width: 768px)" srcset="../img/daniel_platzman_720w.jpg" />
+                      <source media="(min-width: 769px)" srcset="../img/daniel_platzman.jpg" />
+                      <img src="../img/daniel_platzman.jpg" alt="Foto de Wayne Sermon">
+                    </picture>
                     <figcaption>Daniel Platzman (Batería)</figcaption>
                 </figure>  
     

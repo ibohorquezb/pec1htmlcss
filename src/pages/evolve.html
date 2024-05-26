@@ -8,7 +8,10 @@
     <meta name="description" content="Evolve - Imagine Dragons" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png"/>
+    <!-- Incluimos el favicon para el modo claro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <!-- Incluimos el favicon para el modo oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css"/>
@@ -27,7 +30,12 @@
             
             <div class="left-block">
                 <figure>
-                    <img src="/src/img/evolve.jpg" alt="Portada de Evolve">
+                        <img src="/src/img/evolve.jpg"
+                        srcset="/src/img/evolve_320w.jpg 320w,
+                        /src/img/evolve_480w.jpg 480w,
+                        /src/img/evolve.jpg 640w"
+                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                        alt="Portada Evolve" />
                     <figcaption>Portada de <strong>Evolve</strong></figcaption>
                 </figure>
 
@@ -52,73 +60,115 @@
                 <h3 id="albums">Álbumes <i class="fa-solid fa-angle-down fa-lg"></i></h3>
 
                 <ul class="img-inline">
-                    <li>    
-                            <a href="night_visions.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/night_visions.jpg" alt="Portada Night Visions" />
-                                            <figcaption class="overlay">
-                                                    <p>Night Visions</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="smoke_mirrors.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/smoke_mirrors.jpg" alt="Portada Smoke + Mirrors" />
-                                            <figcaption class="overlay">
-                                                    <p>Smoke + Mirrors</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="evolve.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/evolve.jpg" alt="Portada Evolve" />
-                                            <figcaption class="overlay">
-                                                    <p>Evolve</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="origins.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/origins.jpg" alt="Portada Origins" />
-                                            <figcaption class="overlay">
-                                                    <p>Origins</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="mercury_act_1.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/mercury_act_1.jpg" alt="Portada Mercury - Act 1" />
-                                            <figcaption class="overlay">
-                                                    <p>Mercury - Act 1</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="mercury_act_2.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/mercury_act_2.webp" alt="Portada Mercury - Act 2" />
-                                            <figcaption class="overlay">
-                                                    <p>Mercury - Act 2</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-            </ul>
+                        <li>    
+                                <a href="night_visions.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/night_visions.jpg"
+                                                        srcset="/src/img/night_visions_320w.jpg 320w,
+                                                        /src/img/night_visions_480w.jpg 480w,
+                                                        /src/img/night_visions.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Night Visions" />
+                                                <figcaption class="overlay">
+                                                        <p>Night Visions</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="smoke_mirrors.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/smoke_mirrors.jpg" 
+                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
+                                                        /src/img/smoke_mirrors_480w.jpg 480w,
+                                                        /src/img/smoke_mirrors.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Smoke + Mirrors" />
+                                                <figcaption class="overlay">
+                                                        <p>Smoke + Mirrors</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="evolve.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/evolve.jpg"
+                                                        srcset="/src/img/evolve_320w.jpg 320w,
+                                                        /src/img/evolve_480w.jpg 480w,
+                                                        /src/img/evolve.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Evolve" />
+                                                <figcaption class="overlay">
+                                                        <p>Evolve</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="origins.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/origins.jpg"
+                                                        srcset="/src/img/origins_320w.jpg 320w,
+                                                        /src/img/origins_480w.jpg 480w,
+                                                        /src/img/origins.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Origins" />
+                                                <figcaption class="overlay">
+                                                        <p>Origins</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                        <a href="mercury_act_1.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/mercury_act_1.jpg" 
+                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
+                                                                /src/img/mercury_act_1_480w.jpg 480w,
+                                                                /src/img/mercury_act_1.jpg 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Mercury - Act 1" />
+                                                        <figcaption class="overlay">
+                                                                <p>Mercury - Act 1</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="mercury_act_2.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/mercury_act_2.webp" 
+                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
+                                                                /src/img/mercury_act_2_480w.webp 480w,
+                                                                /src/img/mercury_act_2.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Mercury - Act 2" />
+                                                        <figcaption class="overlay">
+                                                                <p>Mercury - Act 2</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                        </ul>
+
+                        <br/><hr/><br/>
+                        
+                        <figure>
+                                <img src="/src/img/art_evolve.png" alt="Fan art Evolve" />
+                                <figcaption>Fan art del álbum <strong>Evolve</strong></figcaption>
+                        </figure>
             </div>
 
             <div class="right-block">
                 <h2>Evolve</h2>
 
                 <p><strong>Evolve</strong> (estilizado como <strong>ƎVOLVE</strong>, en español: <strong><em>Evolucionar</em></strong>) es el tercer álbum de estudio de la banda estadounidense de rock Imagine Dragons, lanzado el 23 de junio de 2017 a través de <em>KIDinaKORNER</em> e <em>Interscope Records</em>. El álbum es el sucesor de su segundo álbum de estudio, <strong>Smoke + Mirrors</strong> (2015) y fue precedido por tres singles: <strong>Believer</strong>, <strong>Thunder</strong> y <strong>Whatever It Takes</strong>.</p>
+
+                <figure>
+                        <img src="/src/img/believer.gif" alt="Momento del videoclip Believer" />
+                        <figcaption>Momento del videoclip <strong>Believer</strong></figcaption>
+                </figure>
 
                 <p>En febrero de 2016, tras el éxito de su segundo álbum, <strong>Smoke + Mirrors</strong> y una gira mundial de diez meses, los miembros de <strong>Imagine Dragons</strong> se comprometieron a tomarse un tiempo libre de la banda. En una entrevista con <em>Billboard</em>, el vocalista <em>Dan Reynolds</em> declaró que el grupo estaría en descanso durante el resto del año. A lo largo de 2016, la banda contribuyó canciones a las bandas sonoras de <em>Yo Antes de Ti</em>, <em>Escuadrón Suicida</em> y <em>Pasajeros</em>, además de tocar en varios shows.</p>
                 

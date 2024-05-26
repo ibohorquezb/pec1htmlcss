@@ -2,18 +2,21 @@
 <html lang="es">
 
   <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="Iván Bohórquez Barrios" />
-    <meta name="description" content="Smoke + Mirrors - Imagine Dragons" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css"/>
-    <script type="module" src="../js/scripts.js"></script>
-    <title>Smoke + Mirrors - Imagine Dragons</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Iván Bohórquez Barrios" />
+        <meta name="description" content="Smoke + Mirrors - Imagine Dragons" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <!-- Incluimos el favicon para el modo claro -->
+        <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+        <!-- Incluimos el favicon para el modo oscuro -->
+        <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
+        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css"/>
+        <script type="module" src="../js/scripts.js"></script>
+        <title>Smoke + Mirrors - Imagine Dragons</title>
   </head>
 
   <body>
@@ -27,7 +30,12 @@
             
             <div class="left-block">
                 <figure>
-                    <img src="/src/img/smoke_mirrors.jpg" alt="Portada de Smoke + Mirrors">
+                <img src="/src/img/smoke_mirrors.jpg" 
+                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
+                        /src/img/smoke_mirrors_480w.jpg 480w,
+                        /src/img/smoke_mirrors.jpg 640w"
+                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                        alt="Portada Smoke + Mirrors" />
                     <figcaption>Portada de <strong>Smoke + Mirrors</strong></figcaption>
                 </figure>
 
@@ -54,67 +62,104 @@
                 <h3 id="albums">Álbumes <i class="fa-solid fa-angle-down fa-lg"></i></h3>
 
                 <ul class="img-inline">
-                    <li>    
-                            <a href="night_visions.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/night_visions.jpg" alt="Portada Night Visions" />
-                                            <figcaption class="overlay">
-                                                    <p>Night Visions</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="smoke_mirrors.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/smoke_mirrors.jpg" alt="Portada Smoke + Mirrors" />
-                                            <figcaption class="overlay">
-                                                    <p>Smoke + Mirrors</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="evolve.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/evolve.jpg" alt="Portada Evolve" />
-                                            <figcaption class="overlay">
-                                                    <p>Evolve</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="origins.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/origins.jpg" alt="Portada Origins" />
-                                            <figcaption class="overlay">
-                                                    <p>Origins</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="mercury_act_1.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/mercury_act_1.jpg" alt="Portada Mercury - Act 1" />
-                                            <figcaption class="overlay">
-                                                    <p>Mercury - Act 1</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-                    <li>
-                            <a href="mercury_act_2.html">
-                                    <figure class="img-container">
-                                            <img src="/src/img/mercury_act_2.webp" alt="Portada Mercury - Act 2" />
-                                            <figcaption class="overlay">
-                                                    <p>Mercury - Act 2</p>
-                                            </figcaption>
-                                    </figure>
-                            </a>
-                    </li>
-            </ul>
+                        <li>    
+                                <a href="night_visions.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/night_visions.jpg"
+                                                        srcset="/src/img/night_visions_320w.jpg 320w,
+                                                        /src/img/night_visions_480w.jpg 480w,
+                                                        /src/img/night_visions.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Night Visions" />
+                                                <figcaption class="overlay">
+                                                        <p>Night Visions</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="smoke_mirrors.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/smoke_mirrors.jpg" 
+                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
+                                                        /src/img/smoke_mirrors_480w.jpg 480w,
+                                                        /src/img/smoke_mirrors.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Smoke + Mirrors" />
+                                                <figcaption class="overlay">
+                                                        <p>Smoke + Mirrors</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="evolve.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/evolve.jpg"
+                                                        srcset="/src/img/evolve_320w.jpg 320w,
+                                                        /src/img/evolve_480w.jpg 480w,
+                                                        /src/img/evolve.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Evolve" />
+                                                <figcaption class="overlay">
+                                                        <p>Evolve</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="origins.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/origins.jpg"
+                                                        srcset="/src/img/origins_320w.jpg 320w,
+                                                        /src/img/origins_480w.jpg 480w,
+                                                        /src/img/origins.jpg 640w"
+                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                        alt="Portada Origins" />
+                                                <figcaption class="overlay">
+                                                        <p>Origins</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                        <a href="mercury_act_1.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/mercury_act_1.jpg" 
+                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
+                                                                /src/img/mercury_act_1_480w.jpg 480w,
+                                                                /src/img/mercury_act_1.jpg 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Mercury - Act 1" />
+                                                        <figcaption class="overlay">
+                                                                <p>Mercury - Act 1</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="mercury_act_2.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/mercury_act_2.webp" 
+                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
+                                                                /src/img/mercury_act_2_480w.webp 480w,
+                                                                /src/img/mercury_act_2.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Mercury - Act 2" />
+                                                        <figcaption class="overlay">
+                                                                <p>Mercury - Act 2</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                        </ul>
+                        
+                        <br/><hr/><br/>
+                        
+                        <figure>
+                                <img src="/src/img/art_smoke_mirrors.png" alt="Fan art Smoke + Mirrors" />
+                                <figcaption>Fan art del álbum <strong>Smoke + Mirrors</strong></figcaption>
+                        </figure>
             </div>
 
             <div class="right-block">
@@ -127,6 +172,11 @@
                         <p><em class="author">Dan Reynolds</em>, líder de Imagine Dragons</p>
                 </blockquote> 
                 
+                <figure>
+                        <img src="/src/img/i_bet_my_life.gif" alt="Momento del videoclip I Bet My Life" />
+                        <figcaption>Momento del videoclip <strong>I Bet My Life</strong></figcaption>
+                </figure>
+
                 <p>El álbum recibió opiniones generalmente mixtas de los críticos de música después de su lanzamiento oficial. Sin embargo, debutó en el número uno de la lista <em>Billboard 200</em> en los Estados Unidos, vendiendo más de 172 000 unidades, y también debutó en el número uno en la lista <em>Albums Chart</em> y en la <em>Canadian Albums Chart</em>, siendo considerado por los fans como el mejor álbum de <strong>Imagine Dragons</strong>, siendo certificado desde entonces como disco de oro en Estados Unidos, Reino Unido y Brasil. Hasta noviembre de 2016, se habían vendido cerca de 1 200 000 copias del álbum mundialmente.</p>
                 
                 <figure>
