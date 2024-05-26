@@ -83,6 +83,7 @@ img {
 
 iframe {
     width: fit-content;
+    border: none;
 }
 
 .black {
