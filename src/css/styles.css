@@ -290,7 +290,6 @@ footer .menu li a:hover, footer .rrss li a:hover {
     background-image: url(../img/ticket.jpg);
     background-size: cover;
     background-position: center;
-    /*clip-path: path("M10,0 H290 A10,10 0 0 1 300,10 V50 a10,10 0 0 0 0,20 V140 a10,10 0 0 1 -10,10 H10 a10,10 0 0 1 -10,-10 V70 a10,10 0 0 0 0,-20 V10 A10,10 0 0 1 10,0 Z");*/
     clip-path: polygon(10px 0, 290px 0, 300px 10px, 300px 50px, 300px 70px, 290px 80px, 290px 100px, 290px 120px, 290px 140px, 280px 150px, 10px 150px, 0 140px, 0 130px, 0 110px, 0 90px, 0 70px, 0 50px, 0 30px, 0 10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s ease-out;
