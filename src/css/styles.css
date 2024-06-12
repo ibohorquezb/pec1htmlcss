@@ -78,7 +78,7 @@ blockquote {
 
 img {
     width:  60%;
-    /*padding-top: 10px;*/
+    height: auto;
 }
 
 iframe {
@@ -373,6 +373,7 @@ figure {
 
 .presentation figure img {
     width: 100%;
+    height: auto;
 }
 
 .members, .member {
