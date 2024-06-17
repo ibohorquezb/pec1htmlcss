@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Iván Bohórquez Barrios" />
     <meta name="description" content="Home - Imagine Dragons" />
+    
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <!-- Incluimos el favicon para el modo claro -->
-    <link rel="shortcut icon" type="image/x-icon" href="./img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-    <!-- Incluimos el favicon para el modo oscuro -->
-    <link rel="shortcut icon" type="image/x-icon" href="./img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="./img/background_5_1x.webp" as="image">
+    <link rel="preload" href="./img/background_5_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="./img/background_5.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
     <script defer type="module" src="./js/scripts.js"></script>
+    
+    <!-- Título de la página -->
     <title>Home - Imagine Dragons</title>
   </head>
 
@@ -27,6 +40,7 @@
     <!--Contenedor-->
     <main>
         <div class="ticket">
+            <img src="./img/ticket.webp" alt="Ticket" width="300" height="150" loading="lazy">
             <p>Próximamente</p>
         </div>
     </main>

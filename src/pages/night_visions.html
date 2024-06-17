@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Iván Bohórquez Barrios" />
     <meta name="description" content="Night Visions - Imagine Dragons" />
+    
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <!-- Incluimos el favicon para el modo claro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-    <!-- Incluimos el favicon para el modo oscuro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="../img/background_night_visions_1x.webp" as="image">
+    <link rel="preload" href="../img/background_night_visions_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="../img/background_night_visions.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
+    
+    <!-- Título de la página -->
     <title>Night Visions - Imagine Dragons</title>
   </head>
 
@@ -30,10 +43,10 @@
             
             <div class="left-block">
                 <figure>
-                        <img src="/src/img/night_visions.jpg"
-                                srcset="/src/img/night_visions_320w.jpg 320w,
-                                /src/img/night_visions_480w.jpg 480w,
-                                /src/img/night_visions.jpg 640w"
+                        <img src="/src/img/night_visions.webp"
+                                srcset="/src/img/night_visions_320w.webp 320w,
+                                /src/img/night_visions_480w.webp 480w,
+                                /src/img/night_visions.webp 640w"
                                 sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
                                 alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
                     <figcaption>Portada de <strong>Night Visions</strong></figcaption>
@@ -63,12 +76,7 @@
                         <li>    
                                 <a href="night_visions.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/night_visions.jpg"
-                                                        srcset="/src/img/night_visions_320w.jpg 320w,
-                                                        /src/img/night_visions_480w.jpg 480w,
-                                                        /src/img/night_visions.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/night_visions_320w.webp" alt="Portada Night Visions" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Night Visions</p>
                                                 </figcaption>
@@ -78,12 +86,7 @@
                         <li>
                                 <a href="smoke_mirrors.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors.jpg" 
-                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
-                                                        /src/img/smoke_mirrors_480w.jpg 480w,
-                                                        /src/img/smoke_mirrors.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Smoke + Mirrors</p>
                                                 </figcaption>
@@ -93,12 +96,7 @@
                         <li>
                                 <a href="evolve.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/evolve.jpg"
-                                                        srcset="/src/img/evolve_320w.jpg 320w,
-                                                        /src/img/evolve_480w.jpg 480w,
-                                                        /src/img/evolve.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Evolve" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/evolve_320w.webp" alt="Portada Evolve" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Evolve</p>
                                                 </figcaption>
@@ -108,12 +106,7 @@
                         <li>
                                 <a href="origins.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/origins.jpg"
-                                                        srcset="/src/img/origins_320w.jpg 320w,
-                                                        /src/img/origins_480w.jpg 480w,
-                                                        /src/img/origins.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Origins" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/origins_320w.webp" alt="Portada Origins" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Origins</p>
                                                 </figcaption>
@@ -121,41 +114,31 @@
                                 </a>
                         </li>
                         <li>
-                                        <a href="mercury_act_1.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_1.jpg" 
-                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
-                                                                /src/img/mercury_act_1_480w.jpg 480w,
-                                                                /src/img/mercury_act_1.jpg 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 1" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 1</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="mercury_act_2.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_2.webp" 
-                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
-                                                                /src/img/mercury_act_2_480w.webp 480w,
-                                                                /src/img/mercury_act_2.webp 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 2" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 2</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                        </ul>
+                                <a href="mercury_act_1.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 1</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="mercury_act_2.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_2_320w.webp" alt="Portada Mercury - Act 2" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 2</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                </ul>
 
                         <br/><hr/><br/>
                         
                         <figure>
-                                <img src="/src/img/art_its_time.png" alt="Fan art It's time" loading="lazy" width="764" height="765"/>
+                                <img src="/src/img/art_its_time.webp" alt="Fan art It's time" loading="lazy" width="764" height="765"/>
                                 <figcaption>Fan art del single <strong>It's time</strong></figcaption>
                         </figure>
             </div>
@@ -173,14 +156,17 @@
                 <p>El álbum recibió críticas generalmente mixtas de los críticos de música después de su lanzamiento. Sin embargo, debutó en el número dos en el <em>Billboard 200</em> en los Estados Unidos, vendiendo más de 83.000 copias en su primera semana en el que desde entonces ha sido certificado con doble platino. También alcanzó la cima de la lista <em>Alternative y Rock Albums</em>, así como en los diez primeros lugares de los álbumes en Australia, Austria, Canadá, Alemania, Irlanda, México, Países Bajos, Nueva Zelanda, Noruega, Portugal, Suecia, Suiza, y Reino Unido</p>
                  
                 <figure>
-                        <img src="/src/img/radioactive.gif" alt="Momento del videoclip Radioactive" loading="lazy" width="480" height="181"/>
+                        <video autoplay loop muted playsinline title="Momento del videoclip Radioactive" loading="lazy" width="480" height="181">
+                                <source src="/src/img/radioactive.webm" type="video/webm" />
+                                <source src="/src/img/radioactive.mp4" type="video/mp4" />
+                        </video>
                         <figcaption>Momento del videoclip <strong>Radioactive</strong></figcaption>
                 </figure>
 
                 <p><strong>Night Visions</strong> apareció en la lista <em>Billboard 200</em>, en el top 10 en 2012, 2013 y 2014 el álbum se convirtió en el cuarto álbum más vendido de 2013, en los EE. UU fue nominado para el Premio <em>Juno</em> por Álbum Internacional del Año (2014) y ganó el <em>Billboard Music Award</em> por <em>Top Rock Album (2014)</em>.</p>
                 
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/ktvTqknDobU?si=CKuV1C3chu4g7QE1" title="Videoclip de Radioactive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    <a href="https://youtu.be/ktvTqknDobU" class="lazy-youtube-embed" title="Videoclip de Radioactive">Videoclip de Radioactive</a>
                     <figcaption>Videoclip de <strong>Radioactive</strong></figcaption>
                 </figure>
 

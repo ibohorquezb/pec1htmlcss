@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Iván Bohórquez Barrios" />
     <meta name="description" content="Mercury - Act 1 - Imagine Dragons" />
+    
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <!-- Incluimos el favicon para el modo claro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-    <!-- Incluimos el favicon para el modo oscuro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="../img/background_mercury_act_1_1x.webp" as="image">
+    <link rel="preload" href="../img/background_mercury_act_1_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="../img/background_mercury_act_1.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
+    
+    <!-- Título de la página -->
     <title>Mercury - Act 1 - Imagine Dragons</title>
   </head>
 
@@ -30,10 +43,10 @@
             
             <div class="left-block">
                 <figure>
-                        <img src="/src/img/mercury_act_1.jpg" 
-                        srcset="/src/img/mercury_act_1_320w.jpg 320w,
-                        /src/img/mercury_act_1_480w.jpg 480w,
-                        /src/img/mercury_act_1.jpg 640w"
+                        <img src="/src/img/mercury_act_1.webp" 
+                        srcset="/src/img/mercury_act_1_320w.webp 320w,
+                        /src/img/mercury_act_1_480w.webp 480w,
+                        /src/img/mercury_act_1.webp 640w"
                         sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
                         alt="Portada Mercury - Act 1" loading="lazy" width="640" height="640"/>
                     <figcaption>Portada de <strong>Mercury - Act 1</strong></figcaption>
@@ -65,12 +78,7 @@
                         <li>    
                                 <a href="night_visions.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/night_visions.jpg"
-                                                        srcset="/src/img/night_visions_320w.jpg 320w,
-                                                        /src/img/night_visions_480w.jpg 480w,
-                                                        /src/img/night_visions.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/night_visions_320w.webp" alt="Portada Night Visions" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Night Visions</p>
                                                 </figcaption>
@@ -80,12 +88,7 @@
                         <li>
                                 <a href="smoke_mirrors.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors.jpg" 
-                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
-                                                        /src/img/smoke_mirrors_480w.jpg 480w,
-                                                        /src/img/smoke_mirrors.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Smoke + Mirrors</p>
                                                 </figcaption>
@@ -95,12 +98,7 @@
                         <li>
                                 <a href="evolve.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/evolve.jpg"
-                                                        srcset="/src/img/evolve_320w.jpg 320w,
-                                                        /src/img/evolve_480w.jpg 480w,
-                                                        /src/img/evolve.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Evolve" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/evolve_320w.webp" alt="Portada Evolve" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Evolve</p>
                                                 </figcaption>
@@ -110,12 +108,7 @@
                         <li>
                                 <a href="origins.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/origins.jpg"
-                                                        srcset="/src/img/origins_320w.jpg 320w,
-                                                        /src/img/origins_480w.jpg 480w,
-                                                        /src/img/origins.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Origins" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/origins_320w.webp" alt="Portada Origins" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Origins</p>
                                                 </figcaption>
@@ -123,41 +116,31 @@
                                 </a>
                         </li>
                         <li>
-                                        <a href="mercury_act_1.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_1.jpg" 
-                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
-                                                                /src/img/mercury_act_1_480w.jpg 480w,
-                                                                /src/img/mercury_act_1.jpg 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 1" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 1</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="mercury_act_2.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_2.webp" 
-                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
-                                                                /src/img/mercury_act_2_480w.webp 480w,
-                                                                /src/img/mercury_act_2.webp 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 2" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 2</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                        </ul>
+                                <a href="mercury_act_1.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 1</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="mercury_act_2.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_2_320w.webp" alt="Portada Mercury - Act 2" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 2</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                </ul>
 
                         <br/><hr/><br/>
                         
                         <figure>
-                                <img src="/src/img/art_mercury_act_1.png" alt="Fan art Mercury - Act 1" loading="lazy" width="300" height="310"/>
+                                <img src="/src/img/art_mercury_act_1.webp" alt="Fan art Mercury - Act 1" loading="lazy" width="300" height="310"/>
                                 <figcaption>Fan art del álbum <strong>Mercury - Act 1</strong></figcaption>
                         </figure>
             </div>
@@ -168,7 +151,10 @@
                 <p><strong>Mercury - Act 1</strong> (en español: <em>Mercurio - Acto 1</em>) es el quinto álbum de la banda estadounidense de pop rock <strong>Imagine Dragons</strong>, lanzado el 3 de septiembre de 2021 por <em>KIDinaKORNER</em> e <em>Interscope Records</em>. Fue producido por <em>Rick Rubin</em> y estuvo precedido por tres sencillos: <strong>Follow You / Cutthroat</strong> y <strong>Wrecked</strong>.</p>
 
                 <figure>
-                        <img src="/src/img/follow_you.gif" alt="Momento del videoclip Follow You" loading="lazy" width="480" height="270"/>
+                        <video autoplay loop muted playsinline title="Momento del videoclip Follow You" loading="lazy" width="480" height="270">
+                                <source src="/src/img/follow_you.webm" type="video/webm" />
+                                <source src="/src/img/follow_you.mp4" type="video/mp4" />
+                        </video>
                         <figcaption>Momento del videoclip <strong>Follow You</strong></figcaption>
                 </figure>
 
@@ -180,7 +166,7 @@
                 </blockquote>                      
                 
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/k3zimSRKqNw?si=E-LgCQxd4-1e7Jak" title="Videoclip de Follow You" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    <a href="https://youtu.be/k3zimSRKqNw" class="lazy-youtube-embed" title="Videoclip de Follow You">Videoclip de Follow You</a>
                     <figcaption>Videoclip de <strong>Follow You</strong></figcaption>
                 </figure>
 

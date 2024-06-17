@@ -2,6 +2,7 @@
     font-family: "ImagineDragons";
     src: url("../fonts/Devil\ Breeze\ Bold.ttf") format("truetype");
     font-weight: bold;
+    font-display: swap;
 }
 
 :root {
@@ -287,7 +288,7 @@ footer .menu li a:hover, footer .rrss li a:hover {
 .ticket {
     width: 300px;
     height: 150px;
-    background-image: url(../img/ticket.jpg);
+    /*background-image: url(../img/ticket.jpg);*/
     background-size: cover;
     background-position: center;
     clip-path: polygon(10px 0, 290px 0, 300px 10px, 300px 50px, 300px 70px, 290px 80px, 290px 100px, 290px 120px, 290px 140px, 280px 150px, 10px 150px, 0 140px, 0 130px, 0 110px, 0 90px, 0 70px, 0 50px, 0 30px, 0 10px);
@@ -295,6 +296,13 @@ footer .menu li a:hover, footer .rrss li a:hover {
     transition: transform 0.5s ease-out;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+}
+
+.ticket img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurar que la imagen cubra todo el contenedor sin deformarse */
 }
 
 .ticket:hover {
@@ -302,8 +310,10 @@ footer .menu li a:hover, footer .rrss li a:hover {
 }
 
 .ticket p {
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: var(--fondo);
     font-weight: bold;
     font-size: 1.5rem;;
@@ -323,14 +333,14 @@ footer .menu li a:hover, footer .rrss li a:hover {
 
 /* Para dispositivos con resolución 2x */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .presentacion {
+    .presentation {
         background-image: url(../img/background_2x.webp);
     }
 }
 
 /* Para dispositivos con resolución 3x */
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .presentacion {
+    .presentation {
         background-image: url(../img/background.webp);
     }
 }
@@ -376,6 +386,18 @@ figure {
     height: auto;
 }
 
+/*.presentation*/ figure > a {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+/*.presentation*/ figure .ytlight__play {
+    width: 10%;
+    position: absolute;
+    left: 45%;
+}
+
 .members, .member {
     margin-top: 2rem;
 }
@@ -398,7 +420,7 @@ figure {
 }
 
 #members img {
-    max-width: calc(25% - 5px); 
+    max-width: calc(25% - 5px);
     height: auto;
     object-fit: cover; 
     transition: opacity 0.5s ease-in-out;
@@ -602,7 +624,7 @@ figure {
     color: white;
 }
 
-.detalle img {
+.detalle img, .detalle video {
     width: 100%;
 }
 

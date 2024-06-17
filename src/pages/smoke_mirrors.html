@@ -6,16 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="author" content="Iván Bohórquez Barrios" />
         <meta name="description" content="Smoke + Mirrors - Imagine Dragons" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <!-- Incluimos el favicon para el modo claro -->
-        <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-        <!-- Incluimos el favicon para el modo oscuro -->
-        <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="../css/styles.css"/>
-        <script defer type="module" src="../js/scripts.js"></script>
+        
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="../img/background_smoke_mirrors_1x.webp" as="image">
+    <link rel="preload" href="../img/background_smoke_mirrors_1x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="../img/background_smoke_mirrors.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
+    <script defer type="module" src="../js/scripts.js"></script>
+    
+    <!-- Título de la página -->
         <title>Smoke + Mirrors - Imagine Dragons</title>
   </head>
 
@@ -30,10 +43,10 @@
             
             <div class="left-block">
                 <figure>
-                <img src="/src/img/smoke_mirrors.jpg" 
-                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
-                        /src/img/smoke_mirrors_480w.jpg 480w,
-                        /src/img/smoke_mirrors.jpg 640w"
+                <img src="/src/img/smoke_mirrors.webp" 
+                        srcset="/src/img/smoke_mirrors_320w.webp 320w,
+                        /src/img/smoke_mirrors_480w.webp 480w,
+                        /src/img/smoke_mirrors.webp 640w"
                         sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
                         alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
                     <figcaption>Portada de <strong>Smoke + Mirrors</strong></figcaption>
@@ -65,12 +78,7 @@
                         <li>    
                                 <a href="night_visions.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/night_visions.jpg"
-                                                        srcset="/src/img/night_visions_320w.jpg 320w,
-                                                        /src/img/night_visions_480w.jpg 480w,
-                                                        /src/img/night_visions.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/night_visions_320w.webp" alt="Portada Night Visions" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Night Visions</p>
                                                 </figcaption>
@@ -80,12 +88,7 @@
                         <li>
                                 <a href="smoke_mirrors.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors.jpg" 
-                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
-                                                        /src/img/smoke_mirrors_480w.jpg 480w,
-                                                        /src/img/smoke_mirrors.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Smoke + Mirrors</p>
                                                 </figcaption>
@@ -95,12 +98,7 @@
                         <li>
                                 <a href="evolve.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/evolve.jpg"
-                                                        srcset="/src/img/evolve_320w.jpg 320w,
-                                                        /src/img/evolve_480w.jpg 480w,
-                                                        /src/img/evolve.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Evolve" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/evolve_320w.webp" alt="Portada Evolve" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Evolve</p>
                                                 </figcaption>
@@ -110,12 +108,7 @@
                         <li>
                                 <a href="origins.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/origins.jpg"
-                                                        srcset="/src/img/origins_320w.jpg 320w,
-                                                        /src/img/origins_480w.jpg 480w,
-                                                        /src/img/origins.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Origins" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/origins_320w.webp" alt="Portada Origins" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Origins</p>
                                                 </figcaption>
@@ -123,41 +116,31 @@
                                 </a>
                         </li>
                         <li>
-                                        <a href="mercury_act_1.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_1.jpg" 
-                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
-                                                                /src/img/mercury_act_1_480w.jpg 480w,
-                                                                /src/img/mercury_act_1.jpg 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 1" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 1</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="mercury_act_2.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_2.webp" 
-                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
-                                                                /src/img/mercury_act_2_480w.webp 480w,
-                                                                /src/img/mercury_act_2.webp 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 2" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 2</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                        </ul>
+                                <a href="mercury_act_1.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 1</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="mercury_act_2.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_2_320w.webp" alt="Portada Mercury - Act 2" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 2</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                </ul>
                         
                         <br/><hr/><br/>
                         
                         <figure>
-                                <img src="/src/img/art_smoke_mirrors.png" alt="Fan art Smoke + Mirrors" loading="lazy" width="800" height="800"/>
+                                <img src="/src/img/art_smoke_mirrors.webp" alt="Fan art Smoke + Mirrors" loading="lazy" width="800" height="800"/>
                                 <figcaption>Fan art del álbum <strong>Smoke + Mirrors</strong></figcaption>
                         </figure>
             </div>
@@ -173,14 +156,17 @@
                 </blockquote> 
                 
                 <figure>
-                        <img src="/src/img/i_bet_my_life.gif" alt="Momento del videoclip I Bet My Life" loading="lazy" width="400" height="225"/>
+                        <video autoplay loop muted playsinline title="Momento del videoclip I Bet My Life" loading="lazy" width="400" height="225">
+                                <source src="/src/img/i_bet_my_life.webm" type="video/webm" />
+                                <source src="/src/img/i_bet_my_life.mp4" type="video/mp4" />
+                        </video>
                         <figcaption>Momento del videoclip <strong>I Bet My Life</strong></figcaption>
                 </figure>
 
                 <p>El álbum recibió opiniones generalmente mixtas de los críticos de música después de su lanzamiento oficial. Sin embargo, debutó en el número uno de la lista <em>Billboard 200</em> en los Estados Unidos, vendiendo más de 172 000 unidades, y también debutó en el número uno en la lista <em>Albums Chart</em> y en la <em>Canadian Albums Chart</em>, siendo considerado por los fans como el mejor álbum de <strong>Imagine Dragons</strong>, siendo certificado desde entonces como disco de oro en Estados Unidos, Reino Unido y Brasil. Hasta noviembre de 2016, se habían vendido cerca de 1 200 000 copias del álbum mundialmente.</p>
                 
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/4ht80uzIhNs?si=Dpu-dAHe4Z72jIIh" title="Videoclip de I Bet My Life" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    <a href="https://youtu.be/4ht80uzIhNs" class="lazy-youtube-embed" title="Videoclip de I Bet My Life">Videoclip de I Bet My Life</a>
                     <figcaption>Videoclip de <strong>I Bet My Life</strong></figcaption>
                 </figure>
 

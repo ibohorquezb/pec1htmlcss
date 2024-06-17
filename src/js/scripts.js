@@ -1,9 +1,20 @@
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faFacebook, faXTwitter, faInstagram, faTiktok, faYoutube, faItunes, faSpotify } from '@fortawesome/free-brands-svg-icons';
+import lazyYoutubeEmbed from 'lazy-youtube-embed';
+
+library.add(faFacebook, faXTwitter, faInstagram, faTiktok, faYoutube, faItunes, faSpotify);
+dom.watch();
+
+document.addEventListener('DOMContentLoaded', () => {
+    lazyYoutubeEmbed();
+});
+
 //obtenemos los albums
 let albums = document.getElementById("albums");
 // Obtener todas las imágenes de los miembros
 let images = document.querySelectorAll('#members img');
 
-Array.from(document.getElementsByClassName("logo")).forEach((logo) => {
+Array.from(document.getElementsByClassName("fade")).forEach((logo) => {
     fadeIn(logo);
 });
 
@@ -53,8 +64,8 @@ if(albums!=null) {
 function markCurrentCover() {
     let cover = document.querySelector(".detalle img");
     if(cover!=null) {
-        let path = cover.getAttribute("src");
-        let miniCover = document.querySelector(".detalle .img-inline img[src='" + path + "']");
+        let alt = cover.getAttribute("alt");
+        let miniCover = document.querySelector(".detalle .img-inline img[alt='" + alt + "']");
         miniCover.style.border = "2px solid white";
     }
 }

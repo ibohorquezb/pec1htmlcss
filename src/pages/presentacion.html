@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Iván Bohórquez Barrios" />
     <meta name="description" content="Presentación - Imagine Dragons" />
+    
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <!-- Incluimos el favicon para el modo claro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-    <!-- Incluimos el favicon para el modo oscuro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="../img/background_1x.webp" as="image">
+    <link rel="preload" href="../img/background_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="../img/background.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
+    
+    <!-- Título de la página -->
     <title>Presentación - Imagine Dragons</title>
   </head>
 
@@ -38,16 +51,56 @@
 
             <figure id="members">
               <a href="#ben-mckee">
-                <img src="/src/img/group_ben_mckee.webp" alt="Foto de Ben McKee" loading="lazy" width="526" height="1920"/>
+                <!-- <img src="/src/img/group_ben_mckee.webp" alt="Foto de Ben McKee" loading="lazy" width="526" height="1920"/> -->
+                <img src="/src/img/group_ben_mckee.webp"
+                  srcset="/src/img/group_ben_mckee_110w.webp 110w,
+                          /src/img/group_ben_mckee.webp 526w"
+                  sizes="(max-width: 768px) 110px, 526px"
+                  alt="Foto de Dan Reynolds" loading="lazy" width="526" height="1920"/>
+                <!-- <picture class="img-member">
+                  <source media="(max-width: 768px)" srcset="../img/group_ben_mckee_110w.webp" />
+                  <source media="(min-width: 769px)" srcset="../img/group_ben_mckee.webp" />
+                  <img src="/src/img/group_ben_mckee.webp" alt="Foto de Ben McKee" loading="lazy" width="526" height="1920"/>
+                </picture> -->
               </a>
               <a href="#dan-reynolds">           
-                <img src="/src/img/group_dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/>
+                <!-- <img src="/src/img/group_dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/> -->
+                <img src="/src/img/group_dan_reynolds.webp"
+                  srcset="/src/img/group_dan_reynolds_131w.webp 131w,
+                          /src/img/group_dan_reynolds.webp 630w"
+                  sizes="(max-width: 768px) 131px, 630px"
+                  alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/>
+                <!-- <picture class="img-member">
+                  <source media="(max-width: 768px)" srcset="../img/group_dan_reynolds_131w.webp" />
+                  <source media="(min-width: 769px)" srcset="../img/group_dan_reynolds.webp" />
+                  <img src="/src/img/group_dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/>
+                </picture> -->
               </a>
               <a href="#wayne-sermon">
-                <img src="/src/img/group_wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/>
+                <!-- <img src="/src/img/group_wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/> -->
+                <img src="/src/img/group_wayne_sermon.webp"
+                  srcset="/src/img/group_wayne_sermon_80w.webp 80w,
+                          /src/img/group_wayne_sermon.webp 382w"
+                  sizes="(max-width: 768px) 80px, 382px"
+                  alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/>
+                <!-- <picture class="img-member">
+                  <source media="(max-width: 768px)" srcset="../img/group_wayne_sermon_80w.webp" />
+                  <source media="(min-width: 769px)" srcset="../img/group_wayne_sermon.webp" />
+                  <img src="/src/img/group_wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/>
+                </picture> -->
               </a> 
               <a href="#daniel-platzman">
-                <img src="/src/img/group_daniel_platzman.webp" alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/>
+                <!-- <img src="/src/img/group_daniel_platzman.webp" alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/> -->
+                <img src="/src/img/group_daniel_platzman.webp"
+                  srcset="/src/img/group_daniel_platzman_82w.webp 82w,
+                          /src/img/group_daniel_platzman.webp 394w"
+                  sizes="(max-width: 768px) 82px, 394px"
+                  alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/>
+                <!-- <picture class="img-member">
+                  <source media="(max-width: 768px)" srcset="../img/group_daniel_platzman_82w.webp" />
+                  <source media="(min-width: 769px)" srcset="../img/group_daniel_platzman.webp" />
+                  <img src="/src/img/group_daniel_platzman.webp" alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/>
+                </picture> -->
               </a>
               <figcaption></figcaption>
             </figure>
@@ -59,9 +112,9 @@
             
             <figure>
                 <picture>
-                  <source media="(max-width: 768px)" srcset="../img/background_2_portrait.jpg" />
-                  <source media="(min-width: 769px)" srcset="../img/background_2.jpg" />
-                  <img src="../img/background_2.jpg" alt="Retrato de Imagine Dragons" loading="lazy" width="1920" height="1080"/>
+                  <source media="(max-width: 768px)" srcset="../img/background_2_350w.webp" />
+                  <source media="(min-width: 769px)" srcset="../img/background_2.webp" />
+                  <img src="../img/background_2.webp" alt="Retrato de Imagine Dragons" loading="lazy" width="1920" height="1080"/>
                 </picture>
                 <figcaption>Foto de Imagine Dragons</figcaption>
             </figure>
@@ -70,7 +123,7 @@
             <p>En la última mitad de la década pasada, <strong>Imagine Dragons</strong> ha emergido como una de las bandas de rock más grandes y cautivadoras del mundo. Su tercer álbum de estudio, <a href="./evolve.html">EVOLVE</a>, lanzado en junio de 2017, se convirtió en doble platino en menos de un año y produjo tres sencillos consecutivos número uno: <strong>Believer</strong>, <strong>Thunder</strong> y <strong>Whatever It Takes</strong>.</p>
             
             <figure>
-                <iframe src="https://www.youtube-nocookie.com/embed/p7W2aDWVq98?si=L7DiF52Jr0B0OmFe" title="Thunder (En vivo)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <a href="https://youtu.be/p7W2aDWVq98" class="lazy-youtube-embed" title="Thunder (En vivo)">Thunder (En vivo)</a>
                 <figcaption>Thunder (En vivo)</figcaption>
             </figure>
             
@@ -78,7 +131,7 @@
             <p>Con <a href="./origins.html">Origins</a>, <strong>Imagine Dragons</strong> ofrece una reflexión sobre el autodescubrimiento y examina cómo el avance tecnológico ha alterado la experiencia humana. El primer sencillo del álbum, <strong>Natural</strong>, encabezó la lista <em>Alternative Songs</em> durante cinco semanas consecutivas y rompió el récord de giros en la lista de radio alternativa con más de 4,000 giros en una sola semana. El álbum también aborda las diversas dimensiones del amor romántico, desde la intensidad inquieta hasta la melancolía soñadora, y ofrece un sentido de cierre bittersweet en pistas como <strong>Birds</strong>. En general, <a href="./origins.html">Origins</a> es un testimonio de los altibajos de la vida de la banda y captura las emociones viscerales y vulnerables de su líder, <a href="#dan-reynolds">Dan Reynolds</a>.</p>
             
             <figure>
-                <iframe src="https://www.youtube-nocookie.com/embed/SUkCg1i-b0o?si=2zA_mhxnp_iD00AX" title="Natural (En vivo)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                <a href="https://youtu.be/SUkCg1i-b0o" class="lazy-youtube-embed" title="Natural (En vivo)">Natural (En vivo)</a>
                 <figcaption>Natural (En vivo)</figcaption>
             </figure>
 
@@ -93,9 +146,9 @@
     
                 <figure>
                   <picture>
-                      <source media="(max-width: 768px)" srcset="../img/dan_reynolds_725w.jpg" />
-                      <source media="(min-width: 769px)" srcset="../img/dan_reynolds.jpg" />
-                      <img src="../img/dan_reynolds.jpg" alt="Foto de Dan Reynolds" loading="lazy" width="1075" height="614"/>
+                      <source media="(max-width: 768px)" srcset="../img/dan_reynolds_350w.webp" />
+                      <source media="(min-width: 769px)" srcset="../img/dan_reynolds.webp" />
+                      <img src="../img/dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="1075" height="614"/>
                     </picture>
                     <figcaption>Dan Reynolds (Vocalista)</figcaption>
                 </figure>
@@ -108,7 +161,7 @@
     
                 <figure>
                     <picture>
-                      <source media="(max-width: 768px)" srcset="../img/wayne_sermon_742w.webp" />
+                      <source media="(max-width: 768px)" srcset="../img/wayne_sermon_350w.webp" />
                       <source media="(min-width: 769px)" srcset="../img/wayne_sermon.webp" />
                       <img src="../img/wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="1200" height="600"/>
                     </picture>
@@ -139,9 +192,9 @@
     
                 <figure>
                     <picture>
-                      <source media="(max-width: 768px)" srcset="../img/daniel_platzman_720w.jpg" />
-                      <source media="(min-width: 769px)" srcset="../img/daniel_platzman.jpg" />
-                      <img src="../img/daniel_platzman.jpg" alt="Foto de Wayne Sermon" loading="lazy" width="1280" height="720"/>
+                      <source media="(max-width: 768px)" srcset="../img/daniel_platzman_720w.webp" />
+                      <source media="(min-width: 769px)" srcset="../img/daniel_platzman.webp" />
+                      <img src="../img/daniel_platzman.webp" alt="Foto de Wayne Sermon" loading="lazy" width="1280" height="720"/>
                     </picture>
                     <figcaption>Daniel Platzman (Batería)</figcaption>
                 </figure>  

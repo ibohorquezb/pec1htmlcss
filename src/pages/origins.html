@@ -6,16 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="Iván Bohórquez Barrios" />
     <meta name="description" content="Origins - Imagine Dragons" />
+    
+    <!-- Favicons para el modo claro y oscuro -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
+    
+    <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <!-- Incluimos el favicon para el modo claro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_black_favicon.png" media="(prefers-color-scheme: light)"/>
-    <!-- Incluimos el favicon para el modo oscuro -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/dragon_white_favicon.png" media="(prefers-color-scheme: dark)"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900&ver=6.2.3"/> 
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
+    
+    <!-- Precarga de imágenes -->
+    <link rel="preload" href="../img/background_origins_1x.webp" as="image">
+    <link rel="preload" href="../img/background_origins_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+    <link rel="preload" href="../img/background_origins.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
+    
+    <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
+    
+    <!-- Título de la página -->
     <title>Origins - Imagine Dragons</title>
   </head>
 
@@ -30,10 +43,10 @@
             
             <div class="left-block">
                 <figure>
-                        <img src="/src/img/origins.jpg"
-                        srcset="/src/img/origins_320w.jpg 320w,
-                        /src/img/origins_480w.jpg 480w,
-                        /src/img/origins.jpg 640w"
+                        <img src="/src/img/origins.webp"
+                        srcset="/src/img/origins_320w.webp 320w,
+                        /src/img/origins_480w.webp 480w,
+                        /src/img/origins.webp 640w"
                         sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
                         alt="Portada Origins" loading="lazy" width="640" height="640"/>
                     <figcaption>Portada de <strong>Origins</strong></figcaption>
@@ -64,12 +77,7 @@
                         <li>    
                                 <a href="night_visions.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/night_visions.jpg"
-                                                        srcset="/src/img/night_visions_320w.jpg 320w,
-                                                        /src/img/night_visions_480w.jpg 480w,
-                                                        /src/img/night_visions.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/night_visions_320w.webp" alt="Portada Night Visions" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Night Visions</p>
                                                 </figcaption>
@@ -79,12 +87,7 @@
                         <li>
                                 <a href="smoke_mirrors.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors.jpg" 
-                                                        srcset="/src/img/smoke_mirrors_320w.jpg 320w,
-                                                        /src/img/smoke_mirrors_480w.jpg 480w,
-                                                        /src/img/smoke_mirrors.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Smoke + Mirrors</p>
                                                 </figcaption>
@@ -94,12 +97,7 @@
                         <li>
                                 <a href="evolve.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/evolve.jpg"
-                                                        srcset="/src/img/evolve_320w.jpg 320w,
-                                                        /src/img/evolve_480w.jpg 480w,
-                                                        /src/img/evolve.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Evolve" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/evolve_320w.webp" alt="Portada Evolve" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Evolve</p>
                                                 </figcaption>
@@ -109,12 +107,7 @@
                         <li>
                                 <a href="origins.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/origins.jpg"
-                                                        srcset="/src/img/origins_320w.jpg 320w,
-                                                        /src/img/origins_480w.jpg 480w,
-                                                        /src/img/origins.jpg 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Origins" loading="lazy" width="640" height="640"/>
+                                                <img src="/src/img/origins_320w.webp" alt="Portada Origins" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Origins</p>
                                                 </figcaption>
@@ -122,41 +115,31 @@
                                 </a>
                         </li>
                         <li>
-                                        <a href="mercury_act_1.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_1.jpg" 
-                                                                srcset="/src/img/mercury_act_1_320w.jpg 320w,
-                                                                /src/img/mercury_act_1_480w.jpg 480w,
-                                                                /src/img/mercury_act_1.jpg 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 1" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 1</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="mercury_act_2.html">
-                                                <figure class="img-container">
-                                                        <img src="/src/img/mercury_act_2.webp" 
-                                                                srcset="/src/img/mercury_act_2_320w.webp 320w,
-                                                                /src/img/mercury_act_2_480w.webp 480w,
-                                                                /src/img/mercury_act_2.webp 640w"
-                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                                alt="Portada Mercury - Act 2" loading="lazy" width="640" height="640"/>
-                                                        <figcaption class="overlay">
-                                                                <p>Mercury - Act 2</p>
-                                                        </figcaption>
-                                                </figure>
-                                        </a>
-                                </li>
-                        </ul>
+                                <a href="mercury_act_1.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 1</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="mercury_act_2.html">
+                                        <figure class="img-container">
+                                                <img src="/src/img/mercury_act_2_320w.webp" alt="Portada Mercury - Act 2" loading="lazy" width="320" height="320"/>
+                                                <figcaption class="overlay">
+                                                        <p>Mercury - Act 2</p>
+                                                </figcaption>
+                                        </figure>
+                                </a>
+                        </li>
+                </ul>
 
                         <br/><hr/><br/>
                         
                         <figure>
-                                <img src="/src/img/poster_origins.png" alt="Fan art Origins" loading="lazy" width="376" height="499"/>
+                                <img src="/src/img/poster_origins.webp" alt="Fan art Origins" loading="lazy" width="376" height="499"/>
                                 <figcaption>Fan art del álbum <strong>Origins</strong></figcaption>
                         </figure>
             </div>
@@ -172,14 +155,17 @@
                 </blockquote> 
 
                 <figure>
-                        <img src="/src/img/natural.gif" alt="Momento del videoclip Natural" loading="lazy" width="480" height="226"/>
+                        <video autoplay loop muted playsinline title="Momento del videoclip Natural" loading="lazy" width="480" height="226">
+                                <source src="/src/img/natural.webm" type="video/webm" />
+                                <source src="/src/img/natural.mp4" type="video/mp4" />
+                        </video>
                         <figcaption>Momento del videoclip <strong>Natural</strong></figcaption>
                 </figure>
 
                 <p>La portada de <em>Origins</em>, junto con varias piezas de mercancía que giran en torno al álbum, se filtraron en línea el 2 de octubre de 2018. Al día siguiente, <strong>Imagine Dragons</strong> anunció oficialmente el estreno de álbum al público con un tráiler, en el cual la banda habló sobre por qué lanzaron un nuevo álbum tan pronto tras el estreno de <strong>Evolve</strong> y en la etapa final del <strong>Evolve World Tour</strong>, cuyo fin sería en noviembre de 2018. El vocalista <em>Dan Reynolds</em>, explicó que, aunque las bandas suelen tomarse un descanso por un tiempo después de la gira, la banda ya había escrito canciones que se sentían bien para producirlas y lanzarlas de inmediato, ya que estarían en un lugar completamente diferente en el futuro. El final del <strong>Evolve World Tour</strong> concluyó inmediatamente el ciclo de <strong>Evolve</strong> y comenzó el ciclo del álbum <strong>Origins</strong>.</p>
 
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/0I647GU3Jsc?si=6sEeGOyI3djwjsMi" title="Videoclip de Natural" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    <a href="https://youtu.be/0I647GU3Jsc" class="lazy-youtube-embed" title="Videoclip de Natural">Videoclip de Natural</a>
                     <figcaption>Videoclip de <strong>Natural</strong></figcaption>
                 </figure>
 
