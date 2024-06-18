@@ -137,7 +137,7 @@ header .container {
 
 nav {
     margin-top: 1rem;
-    color: var(--texto);;
+    color: var(--fondo);
 }
 
 nav ul {
@@ -167,7 +167,7 @@ nav ul li a {
 
 nav ul li a:hover {
     border: none;
-    color: white;
+    color: var(--texto);
 }
 
 .logo {
@@ -184,6 +184,15 @@ nav ul li a:hover {
 .logo-dragon-black, .logo-dragon-white {
     width: auto;
     height: 100px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+.fade.active {
+    opacity: 1;
 }
 
 /*****************************************
@@ -230,6 +239,7 @@ footer .menu li a:hover, footer .rrss li a:hover {
     background-size: cover;
     background-position: center;
     text-align: center;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -275,7 +285,12 @@ footer .menu li a:hover, footer .rrss li a:hover {
     border: none;
 }
 
-.home .menu li a:hover, .home .rrss li a:hover {
+.home .menu li a:hover {
+    border: none;
+    color: var(--texto);
+}
+
+.home .rrss li a:hover {
     border: none;
     color: white;
 }
@@ -329,6 +344,7 @@ footer .menu li a:hover, footer .rrss li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -386,13 +402,13 @@ figure {
     height: auto;
 }
 
-/*.presentation*/ figure > a {
+figure > a {
     align-items: center;
     display: flex;
     position: relative;
 }
 
-/*.presentation*/ figure .ytlight__play {
+figure .ytlight__play {
     width: 10%;
     position: absolute;
     left: 45%;
@@ -427,7 +443,8 @@ figure {
 }
 
 #members figcaption {
-    font-weight: 600;    
+    font-weight: 600;
+    min-height: 24px;    
 }
 
 #members:hover img {
@@ -444,6 +461,7 @@ figure {
 
 .music {
     background: url(../img/background_music_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -510,6 +528,7 @@ figure {
 
 .night-visions {
     background: url(../img/background_night_visions_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -528,6 +547,7 @@ figure {
 
 .smoke-mirrors {
     background: url(../img/background_smoke_mirrors_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -546,6 +566,7 @@ figure {
 
 .origins {
     background: url(../img/background_origins_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -564,6 +585,7 @@ figure {
 
 .evolve {
     background: url(../img/background_evolve_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -582,6 +604,7 @@ figure {
 
 .mercury-act-1 {
     background: url(../img/background_mercury_act_1_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -600,6 +623,7 @@ figure {
 
 .mercury-act-2 {
     background: url(../img/background_mercury_act_2_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */
@@ -616,8 +640,25 @@ figure {
     }
 }
 
+.detalle .current-cover {
+    border: 2px solid white;
+}
+
+.detalle .img-inline {
+    visibility: hidden;
+    height: 0;
+    /*transition: height 0.3s, visibility 0.3s;*/
+}
+
+.detalle .img-inline.active {
+    visibility: visible;
+    height: auto;
+    margin: 1rem;
+}
+
 .detalle #albums {
     text-align: center;
+    cursor: pointer;
 }
 
 .detalle .overlay {
@@ -660,6 +701,7 @@ figure {
 
 .enlaces {
     background: url(../img/portrait_1x.webp) no-repeat center/cover;
+    min-height: 100vh;
 }
 
 /* Para dispositivos con resolución 2x */

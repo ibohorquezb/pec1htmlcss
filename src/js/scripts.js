@@ -9,13 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
     lazyYoutubeEmbed();
 });
 
+Array.from(document.querySelectorAll(".lazy-youtube-embed img")).forEach((img) => {
+    alert(img.parentElement.title);
+    img.alt = img.parentElement.title;
+    console.log(img.alt);
+});
+
 //obtenemos los albums
 let albums = document.getElementById("albums");
 // Obtener todas las imágenes de los miembros
 let images = document.querySelectorAll('#members img');
 
 Array.from(document.getElementsByClassName("fade")).forEach((logo) => {
-    fadeIn(logo);
+    //fadeIn(logo);
+    logo.classList.add('active');
 });
 
 toggleAlbumsButton(document.documentElement.clientWidth);
@@ -49,11 +56,11 @@ window.addEventListener('resize', function() {
 if(albums!=null) {
     albums.addEventListener("click", function() {
         let state = this.nextElementSibling.style.display === "none" ? "grid" : "none";
-        let addIcon = state === "none" ? "fa-angle-down" : "fa-angle-up";
-        let removeIcon = state === "none" ? "fa-angle-up" : "fa-angle-down";
-        this.nextElementSibling.style.display = state;
-        this.querySelector("i").classList.remove(removeIcon);
-        this.querySelector("i").classList.add(addIcon);
+        //let addIcon = state === "none" ? "fa-angle-down" : "fa-angle-up";
+        //let removeIcon = state === "none" ? "fa-angle-up" : "fa-angle-down";
+        this.nextElementSibling.classList.toggle('active');
+        //this.querySelector("i").classList.remove(removeIcon);
+        //this.querySelector("i").classList.add(addIcon);
     });
 }
 
@@ -66,7 +73,7 @@ function markCurrentCover() {
     if(cover!=null) {
         let alt = cover.getAttribute("alt");
         let miniCover = document.querySelector(".detalle .img-inline img[alt='" + alt + "']");
-        miniCover.style.border = "2px solid white";
+        miniCover.classList.add('current-cover');
     }
 }
 
@@ -74,10 +81,11 @@ function toggleAlbumsButton(width) {
     if(albums != null) {
         if(width < 768) {
             albums.style.display = "block";
-            albums.nextElementSibling.style.display = "none";
+            albums.nextElementSibling.style.display = "block";
         } else {
             albums.style.display = "none";
             albums.nextElementSibling.style.display = "grid";
+            albums.nextElementSibling.classList.add('active');
         }
     }
 }
