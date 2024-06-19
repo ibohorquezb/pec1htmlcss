@@ -20,11 +20,6 @@
         <!-- Hojas de estilo -->
         <link rel="stylesheet" href="../css/styles.css"/>
         
-        <!-- Precarga de imágenes -->
-        <link rel="preload" href="../img/background_music_1x.webp" as="image">
-        <link rel="preload" href="../img/background_music_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-        <link rel="preload" href="../img/background_music.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-        
         <!-- Scripts -->
         <script defer type="module" src="../js/scripts.js"></script>
         
@@ -37,71 +32,75 @@
         <include src="includes/header.html"></include>
 
         <!--Contenedor-->
-        <main class="music">
+        <main class="music background-container">
+                <img src="/src/img/background_music.webp" srcset="/src/img/background_music_1x.webp, /src/img/background_music_2x.webp 1.5x, /src/img/background_music.webp 2x"
+                        alt="Fondo de pantalla de la discografía"
+                        class="background"/>
+
                 <div class="container">
-                <h2>Música</h2>                
-                <ul class="img-inline">
-                        <li>    
-                                <a href="night_visions.html">
-                                        <figure class="img-container">
-                                                <img src="/src/img/night_visions.webp"
-                                                        srcset="/src/img/night_visions_320w.webp 320w,
-                                                        /src/img/night_visions_480w.webp 480w,
-                                                        /src/img/night_visions.webp 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
-                                                <figcaption class="overlay">
-                                                        <p>Night Visions</p>
-                                                </figcaption>
-                                        </figure>
-                                </a>
-                        </li>
-                        <li>
-                                <a href="smoke_mirrors.html">
-                                        <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors.webp" 
-                                                        srcset="/src/img/smoke_mirrors_320w.webp 320w,
-                                                        /src/img/smoke_mirrors_480w.webp 480w,
-                                                        /src/img/smoke_mirrors.webp 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
-                                                <figcaption class="overlay">
-                                                        <p>Smoke + Mirrors</p>
-                                                </figcaption>
-                                        </figure>
-                                </a>
-                        </li>
-                        <li>
-                                <a href="evolve.html">
-                                        <figure class="img-container">
-                                                <img src="/src/img/evolve.webp"
-                                                        srcset="/src/img/evolve_320w.webp 320w,
-                                                        /src/img/evolve_480w.webp 480w,
-                                                        /src/img/evolve.webp 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Evolve" loading="lazy" width="640" height="640"/>
-                                                <figcaption class="overlay">
-                                                        <p>Evolve</p>
-                                                </figcaption>
-                                        </figure>
-                                </a>
-                        </li>
-                        <li>
-                                <a href="origins.html">
-                                        <figure class="img-container">
-                                                <img src="/src/img/origins.webp"
-                                                        srcset="/src/img/origins_320w.webp 320w,
-                                                        /src/img/origins_480w.webp 480w,
-                                                        /src/img/origins.webp 640w"
-                                                        sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
-                                                        alt="Portada Origins" loading="lazy" width="640" height="640"/>
-                                                <figcaption class="overlay">
-                                                        <p>Origins</p>
-                                                </figcaption>
-                                        </figure>
-                                </a>
-                        </li>
-                        <li>
+                        <h2>Música</h2>                
+                        <ul class="img-inline">
+                                <li>    
+                                        <a href="night_visions.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/night_visions.webp"
+                                                                srcset="/src/img/night_visions_320w.webp 320w,
+                                                                /src/img/night_visions_480w.webp 480w,
+                                                                /src/img/night_visions.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Night Visions" loading="lazy" width="640" height="640"/>
+                                                        <figcaption class="overlay">
+                                                                <p>Night Visions</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="smoke_mirrors.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/smoke_mirrors.webp" 
+                                                                srcset="/src/img/smoke_mirrors_320w.webp 320w,
+                                                                /src/img/smoke_mirrors_480w.webp 480w,
+                                                                /src/img/smoke_mirrors.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Smoke + Mirrors" loading="lazy" width="640" height="640"/>
+                                                        <figcaption class="overlay">
+                                                                <p>Smoke + Mirrors</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="evolve.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/evolve.webp"
+                                                                srcset="/src/img/evolve_320w.webp 320w,
+                                                                /src/img/evolve_480w.webp 480w,
+                                                                /src/img/evolve.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Evolve" loading="lazy" width="640" height="640"/>
+                                                        <figcaption class="overlay">
+                                                                <p>Evolve</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="origins.html">
+                                                <figure class="img-container">
+                                                        <img src="/src/img/origins.webp"
+                                                                srcset="/src/img/origins_320w.webp 320w,
+                                                                /src/img/origins_480w.webp 480w,
+                                                                /src/img/origins.webp 640w"
+                                                                sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, 640px"
+                                                                alt="Portada Origins" loading="lazy" width="640" height="640"/>
+                                                        <figcaption class="overlay">
+                                                                <p>Origins</p>
+                                                        </figcaption>
+                                                </figure>
+                                        </a>
+                                </li>
+                                <li>
                                         <a href="mercury_act_1.html">
                                                 <figure class="img-container">
                                                         <img src="/src/img/mercury_act_1.webp" 

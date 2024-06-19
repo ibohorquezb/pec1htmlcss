@@ -20,16 +20,11 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
     
-    <!-- Precarga de imágenes -->
-    <link rel="preload" href="../img/background_smoke_mirrors_1x.webp" as="image">
-    <link rel="preload" href="../img/background_smoke_mirrors_1x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-    <link rel="preload" href="../img/background_smoke_mirrors.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-    
     <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
     
     <!-- Título de la página -->
-        <title>Smoke + Mirrors - Imagine Dragons</title>
+    <title>Smoke + Mirrors - Imagine Dragons</title>
   </head>
 
   <body>
@@ -38,7 +33,13 @@
     <include src="includes/header.html"></include>
       
     <!--Contenedor-->
-    <main class="detalle smoke-mirrors">
+    <main class="detalle smoke-mirrors background-container">
+
+        <img src="/src/img/background_smoke_mirrors.webp"
+                        srcset="/src/img/background_smoke_mirrors_1x.webp, /src/img/background_smoke_mirrors_2x.webp 1.5x, /src/img/background_smoke_mirrors.webp 2x"
+                        alt="Fondo del álbum Smoke + Mirrors"
+                        class="background"/>
+
         <article class="container">           
             
             <div class="left-block">
@@ -88,7 +89,7 @@
                         <li>
                                 <a href="smoke_mirrors.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
+                                                <img class="current-cover" src="/src/img/smoke_mirrors_320w.webp" alt="Portada Smoke + Mirrors" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Smoke + Mirrors</p>
                                                 </figcaption>

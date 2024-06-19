@@ -20,11 +20,6 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
     
-    <!-- Precarga de imágenes -->
-    <link rel="preload" href="../img/background_mercury_act_1_1x.webp" as="image">
-    <link rel="preload" href="../img/background_mercury_act_1_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-    <link rel="preload" href="../img/background_mercury_act_1.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-    
     <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
     
@@ -38,7 +33,13 @@
     <include src="includes/header.html"></include>
       
     <!--Contenedor-->
-    <main class="detalle mercury-act-1">
+    <main class="detalle mercury-act-1 background-container">
+        
+        <img src="/src/img/background_mercury_act_1.webp"
+                        srcset="/src/img/background_mercury_act_1_1x.webp, /src/img/background_mercury_act_1_2x.webp 1.5x, /src/img/background_mercury_act_1.webp 2x"
+                        alt="Fondo del álbum Mercury Act 1"
+                        class="background"/>
+        
         <article class="container">           
             
             <div class="left-block">
@@ -118,7 +119,7 @@
                         <li>
                                 <a href="mercury_act_1.html">
                                         <figure class="img-container">
-                                                <img src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
+                                                <img class="current-cover" src="/src/img/mercury_act_1_320w.webp" alt="Portada Mercury - Act 1" loading="lazy" width="320" height="320"/>
                                                 <figcaption class="overlay">
                                                         <p>Mercury - Act 1</p>
                                                 </figcaption>

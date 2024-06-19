@@ -20,11 +20,6 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./css/styles.css"/>
     
-    <!-- Precarga de imágenes -->
-    <link rel="preload" href="./img/background_5_1x.webp" as="image">
-    <link rel="preload" href="./img/background_5_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-    <link rel="preload" href="./img/background_5.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-    
     <!-- Scripts -->
     <script defer type="module" src="./js/scripts.js"></script>
     
@@ -32,7 +27,12 @@
     <title>Home - Imagine Dragons</title>
   </head>
 
-  <body class="home">
+  <body class="home background-container">
+
+    <img src="/src/img/background_5.webp"
+                        srcset="/src/img/background_5_1x.webp, /src/img/background_5_2x.webp 1.5x, /src/img/background_5.webp 2x"
+                        alt="Fondo de portada de la web"
+                        class="background"/>
 
     <!--Cabecera-->
     <include src="./includes/header.html"></include>

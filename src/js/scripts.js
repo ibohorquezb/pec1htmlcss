@@ -27,7 +27,7 @@ Array.from(document.getElementsByClassName("fade")).forEach((logo) => {
 
 toggleAlbumsButton(document.documentElement.clientWidth);
 
-markCurrentCover();
+//markCurrentCover();
 
 /*****************************************
 ************** Eventos *******************

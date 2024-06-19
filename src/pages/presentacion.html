@@ -20,11 +20,6 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
     
-    <!-- Precarga de imágenes -->
-    <link rel="preload" href="../img/background_1x.webp" as="image">
-    <link rel="preload" href="../img/background_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-    <link rel="preload" href="../img/background.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-    
     <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
     
@@ -38,7 +33,13 @@
     <include src="includes/header.html"></include>
       
     <!--Contenedor-->
-    <main class="presentation">
+    <main class="presentation background-container">
+
+        <img src="/src/img/background.webp"
+        srcset="/src/img/background_1x.webp, /src/img/background_2x.webp 1.5x, /src/img/background.webp 2x"
+        alt="Fondo del grupo"
+        class="background"/>
+
         <article class="container">
           
           <div class="left-block">

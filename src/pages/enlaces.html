@@ -20,11 +20,6 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
     
-    <!-- Precarga de imágenes -->
-    <link rel="preload" href="../img/portrait_1x.webp" as="image">
-    <link rel="preload" href="../img/portrait_2x.webp" as="image" media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-    <link rel="preload" href="../img/portrait.webp" as="image" media="(-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi)">
-    
     <!-- Scripts -->
     <script defer type="module" src="../js/scripts.js"></script>
     
@@ -37,7 +32,8 @@
         <include src="includes/header.html"></include>
 
         <!--Contenedor-->
-        <main class="enlaces">
+        <main class="enlaces background-container">
+            <img class="background" srcset="/src/img/portrait_1x.webp, /src/img/portrait_2x.webp 1.5x, /src/img/portrait.webp 2x" src="/src/img/portrait.webp" alt="Fondo de pantalla del grupo" />
             
             <div class="container">
 

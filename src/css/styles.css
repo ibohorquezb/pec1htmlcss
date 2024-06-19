@@ -1,6 +1,6 @@
 @font-face {
     font-family: "ImagineDragons";
-    src: url("../fonts/Devil\ Breeze\ Bold.ttf") format("truetype");
+    src: url("../fonts/Devil\ Breeze\ Bold.woff2") format("truetype");
     font-weight: bold;
     font-display: swap;
 }
@@ -33,6 +33,23 @@ main {
     flex: 1;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    z-index: -1;
 }
 
 .container {
@@ -234,26 +251,7 @@ footer .menu li a:hover, footer .rrss li a:hover {
 ******************************************/
 
 .home {
-    background-image: url(../img/background_5_1x.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     text-align: center;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .home {
-        background-image: url(../img/background_5_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .home {
-        background-image: url(../img/background_5.webp);
-    }
 }
 
 .home main {
@@ -303,7 +301,6 @@ footer .menu li a:hover, footer .rrss li a:hover {
 .ticket {
     width: 300px;
     height: 150px;
-    /*background-image: url(../img/ticket.jpg);*/
     background-size: cover;
     background-position: center;
     clip-path: polygon(10px 0, 290px 0, 300px 10px, 300px 50px, 300px 70px, 290px 80px, 290px 100px, 290px 120px, 290px 140px, 280px 150px, 10px 150px, 0 140px, 0 130px, 0 110px, 0 90px, 0 70px, 0 50px, 0 30px, 0 10px);
@@ -337,29 +334,6 @@ footer .menu li a:hover, footer .rrss li a:hover {
 /*****************************************
 *********** presentacion.html ************
 ******************************************/
-
-.presentation {
-    background-image: url(../img/background_1x.webp); /* Cambiar 'ruta/de/tu/imagen.jpg' por la ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .presentation {
-        background-image: url(../img/background_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .presentation {
-        background-image: url(../img/background.webp);
-    }
-}
 
 .presentation p, .detalle p, .singles li {
     opacity: .8;
@@ -459,25 +433,6 @@ figure .ytlight__play {
 ************* musica.html ****************
 ******************************************/
 
-.music {
-    background: url(../img/background_music_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .music {
-        background-image: url(../img/background_music_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .music {
-        background-image: url(../img/background_music.webp);
-    }
-}
-
 .music .container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;
@@ -494,7 +449,8 @@ figure .ytlight__play {
 .img-container {
     position: relative;
     display: inline-block;
-    max-width: fit-content;
+    max-width: 100%;/*max-width: fit-content;*/
+    aspect-ratio: 16/9;
 }
 
 .overlay {
@@ -525,120 +481,6 @@ figure .ytlight__play {
 /*****************************************
 ***************** Detalle ****************
 ******************************************/
-
-.night-visions {
-    background: url(../img/background_night_visions_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .night-visions {
-        background-image: url(../img/background_night_visions_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .night-visions {
-        background-image: url(../img/background_night_visions.webp);
-    }
-}
-
-.smoke-mirrors {
-    background: url(../img/background_smoke_mirrors_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .smoke-mirrors {
-        background-image: url(../img/background_smoke_mirrors_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .smoke-mirrors {
-        background-image: url(../img/background_smoke_mirrors.webp);
-    }
-}
-
-.origins {
-    background: url(../img/background_origins_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .origins {
-        background-image: url(../img/background_origins_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .origins {
-        background-image: url(../img/background_origins.webp);
-    }
-}
-
-.evolve {
-    background: url(../img/background_evolve_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .evolve {
-        background-image: url(../img/background_evolve_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .evolve {
-        background-image: url(../img/background_evolve.webp);
-    }
-}
-
-.mercury-act-1 {
-    background: url(../img/background_mercury_act_1_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .mercury-act-1 {
-        background-image: url(../img/background_mercury_act_1_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .mercury-act-1 {
-        background-image: url(../img/background_mercury_act_1.webp);
-    }
-}
-
-.mercury-act-2 {
-    background: url(../img/background_mercury_act_2_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .mercury-act-2 {
-        background-image: url(../img/background_mercury_act_2_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .mercury-act-2 {
-        background-image: url(../img/background_mercury_act_2.webp);
-    }
-}
 
 .detalle .current-cover {
     border: 2px solid white;
@@ -698,25 +540,6 @@ figure .ytlight__play {
 /*****************************************
 ************ enlaces.html ****************
 ******************************************/
-
-.enlaces {
-    background: url(../img/portrait_1x.webp) no-repeat center/cover;
-    min-height: 100vh;
-}
-
-/* Para dispositivos con resolución 2x */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .enlaces {
-        background-image: url(../img/portrait_2x.webp);
-    }
-}
-
-/* Para dispositivos con resolución 3x */
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
-    .enlaces {
-        background-image: url(../img/portrait.webp);
-    }
-}
 
 .enlaces .container {
     background-color: rgba(255, 255, 255, 0.9);
@@ -821,5 +644,15 @@ figure .ytlight__play {
 
     .img-inline { 
         grid-template-columns: repeat(3,1fr);
+    }
+
+    .enlaces ul {
+        max-width: 100%;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    .enlaces li {
+        max-width: 100%;
     }
 }
