@@ -433,6 +433,10 @@ figure .ytlight__play {
 ************* musica.html ****************
 ******************************************/
 
+.music img {
+    width: 100%;
+}
+
 .music .container {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2rem;

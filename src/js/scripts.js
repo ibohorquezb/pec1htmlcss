@@ -6,13 +6,9 @@ library.add(faFacebook, faXTwitter, faInstagram, faTiktok, faYoutube, faItunes, 
 dom.watch();
 
 document.addEventListener('DOMContentLoaded', () => {
-    lazyYoutubeEmbed();
-});
-
-Array.from(document.querySelectorAll(".lazy-youtube-embed img")).forEach((img) => {
-    alert(img.parentElement.title);
-    img.alt = img.parentElement.title;
-    console.log(img.alt);
+    if(document.querySelectorAll(".lazy-youtube-embed").length > 0){
+        lazyYoutubeEmbed();
+    }    
 });
 
 //obtenemos los albums
@@ -21,7 +17,6 @@ let albums = document.getElementById("albums");
 let images = document.querySelectorAll('#members img');
 
 Array.from(document.getElementsByClassName("fade")).forEach((logo) => {
-    //fadeIn(logo);
     logo.classList.add('active');
 });
 
