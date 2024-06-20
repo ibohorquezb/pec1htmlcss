@@ -14,8 +14,8 @@
     <!-- Preconexión y precarga de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../css/styles.css"/>
@@ -38,7 +38,7 @@
         <img src="/src/img/background_1920w.webp"
         srcset="/src/img/background_1x.webp, /src/img/background_2x.webp 1.5x, /src/img/background_1920w.webp 2x"
         alt="Fondo del grupo"
-        class="background"/>
+        class="background" fetchpriority="high"/>
 
         <article class="container">
           
@@ -52,56 +52,32 @@
 
             <figure id="members">
               <a href="#ben-mckee">
-                <!-- <img src="/src/img/group_ben_mckee.webp" alt="Foto de Ben McKee" loading="lazy" width="526" height="1920"/> -->
                 <img src="/src/img/group_ben_mckee.webp"
                   srcset="/src/img/group_ben_mckee_110w.webp 110w,
                           /src/img/group_ben_mckee.webp 526w"
                   sizes="(max-width: 768px) 110px, 526px"
-                  alt="Foto de Dan Reynolds" loading="lazy" width="526" height="1920"/>
-                <!-- <picture class="img-member">
-                  <source media="(max-width: 768px)" srcset="../img/group_ben_mckee_110w.webp" />
-                  <source media="(min-width: 769px)" srcset="../img/group_ben_mckee.webp" />
-                  <img src="/src/img/group_ben_mckee.webp" alt="Foto de Ben McKee" loading="lazy" width="526" height="1920"/>
-                </picture> -->
+                  alt="Foto de Dan Reynolds" width="526" height="1920"/>
               </a>
               <a href="#dan-reynolds">           
-                <!-- <img src="/src/img/group_dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/> -->
                 <img src="/src/img/group_dan_reynolds.webp"
                   srcset="/src/img/group_dan_reynolds_131w.webp 131w,
                           /src/img/group_dan_reynolds.webp 630w"
                   sizes="(max-width: 768px) 131px, 630px"
-                  alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/>
-                <!-- <picture class="img-member">
-                  <source media="(max-width: 768px)" srcset="../img/group_dan_reynolds_131w.webp" />
-                  <source media="(min-width: 769px)" srcset="../img/group_dan_reynolds.webp" />
-                  <img src="/src/img/group_dan_reynolds.webp" alt="Foto de Dan Reynolds" loading="lazy" width="630" height="1920"/>
-                </picture> -->
+                  alt="Foto de Dan Reynolds" width="630" height="1920"/>
               </a>
               <a href="#wayne-sermon">
-                <!-- <img src="/src/img/group_wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/> -->
                 <img src="/src/img/group_wayne_sermon.webp"
                   srcset="/src/img/group_wayne_sermon_80w.webp 80w,
                           /src/img/group_wayne_sermon.webp 382w"
                   sizes="(max-width: 768px) 80px, 382px"
-                  alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/>
-                <!-- <picture class="img-member">
-                  <source media="(max-width: 768px)" srcset="../img/group_wayne_sermon_80w.webp" />
-                  <source media="(min-width: 769px)" srcset="../img/group_wayne_sermon.webp" />
-                  <img src="/src/img/group_wayne_sermon.webp" alt="Foto de Wayne Sermon" loading="lazy" width="382" height="1920"/>
-                </picture> -->
+                  alt="Foto de Wayne Sermon" width="382" height="1920"/>
               </a> 
               <a href="#daniel-platzman">
-                <!-- <img src="/src/img/group_daniel_platzman.webp" alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/> -->
                 <img src="/src/img/group_daniel_platzman.webp"
                   srcset="/src/img/group_daniel_platzman_82w.webp 82w,
                           /src/img/group_daniel_platzman.webp 394w"
                   sizes="(max-width: 768px) 82px, 394px"
-                  alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/>
-                <!-- <picture class="img-member">
-                  <source media="(max-width: 768px)" srcset="../img/group_daniel_platzman_82w.webp" />
-                  <source media="(min-width: 769px)" srcset="../img/group_daniel_platzman.webp" />
-                  <img src="/src/img/group_daniel_platzman.webp" alt="Foto de Daniel Platzman" loading="lazy" width="394" height="1920"/>
-                </picture> -->
+                  alt="Foto de Daniel Platzman" width="394" height="1920"/>
               </a>
               <figcaption></figcaption>
             </figure>

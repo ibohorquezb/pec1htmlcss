@@ -1,14 +1,15 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faFacebook, faXTwitter, faInstagram, faTiktok, faYoutube, faItunes, faSpotify } from '@fortawesome/free-brands-svg-icons';
-import lazyYoutubeEmbed from 'lazy-youtube-embed';
+import lazyYoutubeEmbedWebp from './lazy-youtube-embed-webp';
 
 library.add(faFacebook, faXTwitter, faInstagram, faTiktok, faYoutube, faItunes, faSpotify);
 dom.watch();
 
 document.addEventListener('DOMContentLoaded', () => {
     if(document.querySelectorAll(".lazy-youtube-embed").length > 0){
-        lazyYoutubeEmbed();
-    }    
+        new lazyYoutubeEmbedWebp();
+    }
+    toggleAlbumsButton(document.documentElement.clientWidth);    
 });
 
 //obtenemos los albums
@@ -20,29 +21,27 @@ Array.from(document.getElementsByClassName("fade")).forEach((logo) => {
     logo.classList.add('active');
 });
 
-toggleAlbumsButton(document.documentElement.clientWidth);
-
-//markCurrentCover();
-
 /*****************************************
 ************** Eventos *******************
 ******************************************/
 
 // Recorrer cada imagen
-images.forEach(img => {
-    // Agregar evento cuando el ratón esta encima
-    img.addEventListener('mouseenter', () => {
-    // Obtener el texto del figcaption dentro del padre figure
-    const caption = img.parentElement.parentElement.querySelector('figcaption');
-    // Establecer el alt de la imagen como el texto del figcaption
-    caption.textContent = img.alt.replace("Foto de ","");
-  });
-
-  // Agregar evento cuando el ratón no esta encima
-  img.addEventListener('mouseleave', () => {
-    img.parentElement.parentElement.querySelector('figcaption').textContent = "";
-  });
-});
+if(images!=null){
+    images.forEach(img => {
+        // Agregar evento cuando el ratón esta encima
+        img.addEventListener('mouseenter', () => {
+        // Obtener el texto del figcaption dentro del padre figure
+        const caption = img.parentElement.parentElement.querySelector('figcaption');
+        // Establecer el alt de la imagen como el texto del figcaption
+        caption.textContent = img.alt.replace("Foto de ","");
+      });
+    
+      // Agregar evento cuando el ratón no esta encima
+      img.addEventListener('mouseleave', () => {
+        img.parentElement.parentElement.querySelector('figcaption').textContent = "";
+      });
+    });
+}
 
 window.addEventListener('resize', function() {
     toggleAlbumsButton(document.documentElement.clientWidth);
